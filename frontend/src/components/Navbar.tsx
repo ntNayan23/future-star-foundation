@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
-import { FaStar } from "react-icons/fa";
+// import { FaStar } from "react-icons/fa";
 import logo from "../assets/future-star-foundation-logo.png";
 import { useState } from "react";
 
