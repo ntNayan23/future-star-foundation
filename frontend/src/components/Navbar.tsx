@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import { FaStar } from "react-icons/fa";
 import logo from "../assets/future-star-foundation-logo.png";
 import { useState } from "react";
 
@@ -28,13 +29,38 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-12">
 
         {/* Logo */}
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <img
             src={logo}
             alt="Future Star Foundation"
             className="h-14 md:h-20 w-auto lg:h-20 w-auto object-contain"
           />
-        </div>
+        </div> */}
+
+           {/* LOGO */}
+          <div className="flex items-center gap-3 cursor-pointer">
+
+            {/* Star Icon */}
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] shadow-md">
+              <FaStar className="text-white text-sm" />
+            </div>
+
+            {/* Text Logo */}
+            <div className="leading-tight">
+              <h1 className="text-lg font-bold tracking-wide">
+                <span className="text-[#D4AF37]">
+                  Future Star
+                </span>{" "}
+                <span className="text-[#0F3D5E]">
+                  Foundation
+                </span>
+              </h1>
+
+              <p className="text-[10px] uppercase tracking-[2px] text-gray-500">
+                Admission Consultancy
+              </p>
+            </div>
+          </div>
 
         {/* Desktop Nav */}
         <div className="hidden items-center gap-10 lg:flex">
