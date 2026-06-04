@@ -1,7 +1,9 @@
 import './App.css'
 import Hero from './components/hero/Hero'
 import Navbar from './components/Navbar'
+import Regions from './components/regions/RegionsSection'
 import UpdatesSection from './components/updates/UpdatesSection'
+
 
 function App() {
  
@@ -12,6 +14,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <UpdatesSection/>
+      <Regions/>
     </div>    
     </>
   )
