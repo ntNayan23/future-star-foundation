@@ -1,0 +1,152 @@
+import { motion, AnimatePresence } from "framer-motion";
+import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import logo from "../assets/future-star-foundation-logo.png";
+import { useState } from "react";
+
+const Navbar = () => {
+
+  const [activeTab, setActiveTab] = useState("Home");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    "Home",
+    "Courses",
+    "Admission Updates",
+    "Success Stories",
+    "Contact",
+  ];
+
+
+  return (
+        <>
+    <motion.nav
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-white/80 backdrop-blur-xl shadow-sm backdrop-blur-lg"
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-12">
+
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src={logo}
+            alt="Future Star Foundation"
+            className="h-14 md:h-20 w-auto lg:h-20 w-auto object-contain"
+          />
+        </div>
+
+        {/* Desktop Nav */}
+        <div className="hidden items-center gap-10 lg:flex">
+          {navLinks.map((link) => (
+            <button
+              key={link}
+              onClick={() => setActiveTab(link)}
+              className={`relative text-sm transition-all duration-300 ${
+                activeTab === link
+                    ? "text-[#F97316] font-semibold"
+                    : "text-[#1F2937] hover:text-[#14B8A6]"
+                }`}
+            >
+              {link}
+
+              {/* Active Underline */}
+              {activeTab === link && (
+                <motion.div
+                  layoutId="activeTab"
+                  className="absolute -bottom-2 left-0 h-[3px] w-full rounded-full bg-[#F97316]"
+                />
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="hidden lg:block">
+          <button className="rounded-full bg-[#F97316] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#ea580c]">
+            Book Free Counselling
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+            {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text-[#0F3D5E] lg:hidden"
+          >
+            {isOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
+          </button>
+      </div>
+    </motion.nav>
+        {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
+            />
+
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3 }}
+              className="fixed right-0 top-0 z-50 flex h-screen w-[75%] max-w-sm flex-col bg-white p-8 shadow-2xl lg:hidden"
+            >
+              {/* Top */}
+              <div className="mb-12 flex items-center justify-between">
+                <img
+                  src={logo}
+                  alt="Future Star Foundation"
+                  className="h-12 w-auto"
+                />
+
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-3xl text-[#0F3D5E]"
+                >
+                  <HiX />
+                </button>
+              </div>
+
+              {/* Links */}
+              <div className="flex flex-col gap-6">
+                {navLinks.map((link) => (
+                  <button
+                    key={link}
+                    onClick={() => {
+                      setActiveTab(link);
+                      setIsOpen(false);
+                    }}
+                    className={`rounded-lg border-l-4 px-4 py-3 text-left text-lg font-medium transition-all duration-300 ${
+                            activeTab === link
+                                ? "border-[#F97316] bg-orange-50 text-[#F97316]"
+                                : "border-transparent text-[#1F2937] hover:bg-gray-50"
+                            }`}
+                  >
+                    {link}
+                  </button>
+                ))}
+              </div>
+
+              {/* Bottom CTA */}
+              <div className="mt-auto">
+                <button className="w-full rounded-full bg-[#F97316] px-6 py-4 text-sm font-semibold text-white shadow-md transition hover:bg-[#ea580c]">
+                  Book Free Counselling
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default Navbar;
