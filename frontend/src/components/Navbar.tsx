@@ -41,9 +41,9 @@ const Navbar = () => {
           <div className="flex items-center gap-3 cursor-pointer">
 
             {/* Star Icon */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] shadow-md">
+            {/* <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#FFD700] to-[#D4AF37] shadow-md">
               <FaStar className="text-white text-sm" />
-            </div>
+            </div> */}
 
             {/* Text Logo */}
             <div className="leading-tight">
