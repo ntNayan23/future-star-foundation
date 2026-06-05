@@ -3,6 +3,7 @@ import CoursesSection from './components/courses/CoursesSection'
 import GuidanceSection from './components/guidance/GuidanceSection'
 import Hero from './components/hero/Hero'
 import Navbar from './components/Navbar'
+import ProcessSection from './components/process/ProcessSection'
 import Regions from './components/regions/RegionsSection'
 import UpdatesSection from './components/updates/UpdatesSection'
 
@@ -19,6 +20,7 @@ function App() {
       <Regions/>
       <GuidanceSection/>
       <CoursesSection/>
+      <ProcessSection/>
     </div>    
     </>
   )

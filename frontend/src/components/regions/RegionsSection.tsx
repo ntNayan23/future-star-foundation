@@ -1,4 +1,5 @@
 
+import IndiaMap from "../IndiaMap";
 import Pills from "./Pills";
 
 const RegionsSection = () => {
@@ -14,6 +15,9 @@ const RegionsSection = () => {
 
         {/* Region Pills */}
         <Pills />
+
+        {/* India Map */}
+        <IndiaMap />
 
         {/* Description */}
         <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-gray-600">

@@ -68,7 +68,7 @@ const Navbar = () => {
             <button
               key={link}
               onClick={() => setActiveTab(link)}
-              className={`relative text-sm transition-all duration-300 ${
+              className={`relative text-[15px] transition-all duration-300 ${
                 activeTab === link
                     ? "text-[#F97316] font-semibold"
                     : "text-[#1F2937] hover:text-[#14B8A6]"

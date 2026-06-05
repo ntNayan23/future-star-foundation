@@ -14,24 +14,19 @@ const FeatureCard = ({
   iconColor,
 }: FeatureCardProps) => {
   return (
-    <div className="flex items-start gap-5 rounded-2xl border border-gray-100 bg-[#F8FAFC] p-5 transition-all duration-300 hover:border-[#14B8A6]/20 hover:shadow-md">
-
+    <div className="flex items-start gap-5 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#14B8A6]/20 hover:shadow-lg">
       {/* Icon */}
       <div
-        className={`flex h-14 w-14 items-center justify-center rounded-2xl text-2xl ${iconBg} ${iconColor}`}
+        className={`flex h-16 w-16 items-center justify-center rounded-2xl text-2xl ${iconBg} ${iconColor}`}
       >
         {icon}
       </div>
 
       {/* Content */}
       <div>
-        <h3 className="text-lg font-semibold text-[#0F3D5E]">
-          {title}
-        </h3>
+        <h3 className="text-lg font-semibold text-[#0F3D5E]">{title}</h3>
 
-        <p className="mt-1 text-sm leading-6 text-gray-500">
-          {description}
-        </p>
+        <p className="mt-1 text-sm leading-6 text-gray-500">{description}</p>
       </div>
     </div>
   );
