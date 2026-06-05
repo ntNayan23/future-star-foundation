@@ -9,87 +9,120 @@ import {
   FaInstagram,
   FaTwitter,
   FaYoutube,
+//   FaWhatsapp,
 } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
     <section className="bg-[#F8FAFC] py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-12">
+        {/* SECTION HEADING */}
+        <div className="mb-14 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[3px] text-[#14B8A6]">
+            Contact Us
+          </p>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+          <h2 className="mt-4 text-3xl font-bold text-[#0F3D5E] sm:text-4xl md:text-5xl">
+            Let's Discuss Your Career Journey
+          </h2>
 
-        <div className="overflow-hidden rounded-[36px] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-500">
+            Connect with our expert admission mentors for personalized
+            counselling, course selection, and admission guidance.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr]">
-
+        {/* MAIN CARD */}
+        <div className="overflow-hidden rounded-[36px] bg-white shadow-[0_25px_80px_rgba(15,61,94,0.12)]">
+          <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr]">
             {/* LEFT SIDE */}
-            <div className="bg-[#0F3D5E] px-8 py-12 text-white md:px-12">
-
+            <div className="bg-[#0F3D5E] px-8 py-12 text-white md:px-10">
               {/* Heading */}
-              <h2 className="text-4xl font-bold leading-tight">
-                Get In Touch
-              </h2>
+              <h2 className="text-3xl font-bold leading-tight">Get In Touch</h2>
 
               {/* Description */}
-              <p className="mt-6 text-base leading-8 text-white/70">
-                Have questions about specific colleges or
-                cutoffs? Reach out to our expert team today.
+              <p className="mt-5 text-base leading-8 text-white/70">
+                Have questions about colleges, admissions, or cutoffs? Reach out
+                to our expert counselling team today.
               </p>
 
               {/* CONTACT ITEMS */}
-              <div className="mt-10 space-y-8">
-
-                {/* PHONE */}
-                <div className="flex items-start gap-4">
-
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-2xl text-[#14B8A6]">
+              <div className="mt-10 space-y-7">
+                {/* ITEM */}
+                <div className="flex gap-4">
+                  <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-xl text-[#14B8A6]">
                     <HiOutlinePhone />
                   </div>
 
                   <div>
-                    <p className="text-sm font-semibold tracking-wide text-[#14B8A6]">
+                    <p className="text-xs font-semibold tracking-[2px] text-[#14B8A6]">
                       PHONE
                     </p>
 
-                    <h4 className="mt-1 text-xl font-semibold">
-                      +91 98765 43210 / 
-                    </h4>
+                    <div className="mt-2 space-y-1">
+                      <a
+                        href="tel:+919111536111"
+                        className="block text-base font-semibold text-white transition hover:text-[#14B8A6]"
+                      >
+                        +91 9111536111
+                      </a>
+
+                      <a
+                        href="tel:+919561193111"
+                        className="block text-base font-semibold text-white transition hover:text-[#14B8A6]"
+                      >
+                        +91 9561193111
+                      </a>
+                    </div>
+
+                    {/* WhatsApp */}
+                    {/* <a
+                      href="https://wa.me/919111536111"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:scale-105"
+                    >
+                      <FaWhatsapp />
+                      Chat on WhatsApp
+                    </a> */}
                   </div>
                 </div>
 
                 {/* EMAIL */}
-                <div className="flex items-start gap-4">
-
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-2xl text-[#14B8A6]">
+                <div className="flex gap-4">
+                  <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-xl text-[#14B8A6]">
                     <HiOutlineMail />
                   </div>
 
                   <div>
-                    <p className="text-sm font-semibold tracking-wide text-[#14B8A6]">
+                    <p className="text-xs font-semibold tracking-[2px] text-[#14B8A6]">
                       EMAIL
                     </p>
 
-                    <h4 className="mt-1 text-xl font-semibold">
-                      contact@futurestar.org
-                    </h4>
+                    <a
+                      href="mailto:futurestarfoundation2025@gmail.com"
+                      className="mt-2 block text-base font-semibold leading-7 text-white transition hover:text-[#14B8A6]"
+                    >
+                      futurestarfoundation2025@gmail.com
+                    </a>
                   </div>
                 </div>
 
                 {/* ADDRESS */}
-                <div className="flex items-start gap-4">
-
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-2xl text-[#14B8A6]">
+                <div className="flex gap-4">
+                  <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-xl text-[#14B8A6]">
                     <HiOutlineLocationMarker />
                   </div>
 
                   <div>
-                    <p className="text-sm font-semibold tracking-wide text-[#14B8A6]">
+                    <p className="text-xs font-semibold tracking-[2px] text-[#14B8A6]">
                       ADDRESS
                     </p>
 
-                    <h4 className="mt-1 max-w-xs text-xl font-semibold leading-8">
-                      Plot 24, Educational Hub,
-                      Ramdaspeth, Nagpur - 440010
-                    </h4>
+                    <p className="mt-2 max-w-xs text-base font-semibold leading-8 text-white/90">
+                      Chatrapati Square, Near Sai Mandir, Sawarkar Nagar,
+                      Vivekanand Nagar, Nagpur, Maharashtra 440015
+                    </p>
                   </div>
                 </div>
               </div>
@@ -99,7 +132,6 @@ const ContactSection = () => {
 
               {/* SOCIALS */}
               <div className="mt-10 flex items-center gap-4">
-
                 {[
                   <FaFacebookF />,
                   <FaInstagram />,
@@ -108,29 +140,30 @@ const ContactSection = () => {
                 ].map((icon, index) => (
                   <button
                     key={index}
-                    className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#14B8A6] hover:bg-[#14B8A6]"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#14B8A6] hover:bg-[#14B8A6]"
                   >
                     {icon}
                   </button>
                 ))}
-
               </div>
             </div>
 
             {/* RIGHT SIDE */}
             <div className="px-8 py-12 md:px-12">
-
               {/* Heading */}
-              <h3 className="text-4xl font-bold text-[#0F3D5E]">
+              <h3 className="text-3xl font-bold text-[#0F3D5E]">
                 Book A Consultation
               </h3>
 
+              <p className="mt-3 text-gray-500">
+                Fill out the form and our admission experts will contact you
+                shortly.
+              </p>
+
               {/* FORM */}
               <form className="mt-10">
-
                 {/* ROW */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-
                   {/* NAME */}
                   <div>
                     <label className="mb-3 block text-sm font-medium text-gray-600">
@@ -140,7 +173,7 @@ const ContactSection = () => {
                     <input
                       type="text"
                       placeholder="Enter your name"
-                      className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6]"
+                      className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
                     />
                   </div>
 
@@ -153,28 +186,30 @@ const ContactSection = () => {
                     <input
                       type="text"
                       placeholder="Enter your number"
-                      className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6]"
+                      className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
                     />
                   </div>
                 </div>
 
                 {/* COURSE */}
                 <div className="mt-6">
-
                   <label className="mb-3 block text-sm font-medium text-gray-600">
                     Interested Course
                   </label>
 
-                  <input
-                    type="text"
-                    placeholder="Which course are you interested in?"
-                    className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6]"
-                  />
+                  <select className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10">
+                    <option>Select a course</option>
+                    <option>MBBS</option>
+                    <option>BAMS</option>
+                    <option>MBA</option>
+                    <option>B.Tech</option>
+                    <option>BPT</option>
+                    <option>B.Sc</option>
+                  </select>
                 </div>
 
                 {/* MESSAGE */}
                 <div className="mt-6">
-
                   <label className="mb-3 block text-sm font-medium text-gray-600">
                     Your Message
                   </label>
@@ -182,18 +217,21 @@ const ContactSection = () => {
                   <textarea
                     rows={5}
                     placeholder="How can we help you?"
-                    className="w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all duration-300 focus:border-[#14B8A6]"
+                    className="w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
                   />
                 </div>
 
                 {/* BUTTON */}
-                <button className="mt-8 h-14 w-full rounded-2xl bg-[#F97316] text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#ea580c]">
+                <button className="mt-8 h-14 w-full rounded-2xl bg-[#F97316] text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#ea580c] hover:shadow-xl">
                   Submit Request
                 </button>
 
+                {/* TRUST TEXT */}
+                <p className="mt-4 text-center text-sm text-gray-400">
+                  We usually respond within 15 minutes.
+                </p>
               </form>
             </div>
-
           </div>
         </div>
       </div>
