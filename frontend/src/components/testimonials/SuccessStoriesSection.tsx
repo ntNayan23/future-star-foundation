@@ -4,7 +4,7 @@ import { HiOutlineChatAlt2 } from "react-icons/hi";
 
 const SuccessStoriesSection = () => {
   return (
-    <section className="bg-[#F8FAFC] py-16 md:py-20">
+    <section className="bg-[#F8FAFC] py-10 md:py-12">
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
 
