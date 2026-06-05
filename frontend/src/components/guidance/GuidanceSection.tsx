@@ -5,7 +5,7 @@ import {
   HiOutlineMap,
 } from "react-icons/hi";
 
-import counsellingImage from "../../assets/guidance-section-image.jpg";
+import counsellingImage from "../../assets/guidance-section-image.webp";
 
 const GuidanceSection = () => {
   return (
@@ -21,6 +21,7 @@ const GuidanceSection = () => {
             <img
               src={counsellingImage}
               alt="Career Guidance"
+              loading="lazy"
               className="h-[550px] w-full object-cover"
             />
           </div>

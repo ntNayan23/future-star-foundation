@@ -1,9 +1,9 @@
-import mbbs from "../../assets/mbbs.jpg";
-import bams from "../../assets/bams.jpg";
-import mba from "../../assets/mba.jpg";
-import btech from "../../assets/btech.jpg";
-import bpt from "../../assets/bpt.jpg";
-import bsc from "../../assets/bsc.jpg";
+import mbbs from "../../assets/mbbs.webp";
+import bams from "../../assets/bams.webp";
+import mba from "../../assets/mba.webp";
+import btech from "../../assets/btech.webp";
+import bpt from "../../assets/bpt.webp";
+import bsc from "../../assets/bsc.webp";
 
 import {
   HiOutlineAcademicCap,

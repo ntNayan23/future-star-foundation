@@ -3,7 +3,7 @@ import StatsStrip from "./StatsStrip";
 import { FaUserGraduate } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";
-import college from "../../assets/hero-section-image.jpg";
+import college from "../../assets/hero-section-image.webp";
 
 const Hero = () => {
   return (
@@ -53,6 +53,7 @@ const Hero = () => {
             <img
               src={college}
               alt="Students"
+               loading="lazy"
               className="h-[250px] w-full max-w-[520px] object-cover sm:h-[350px] lg:h-[420px]"
             />
 

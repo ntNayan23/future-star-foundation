@@ -130,6 +130,7 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="Future Star Foundation"
+                  loading="lazy"
                   className="h-12 w-auto"
                 />
 
