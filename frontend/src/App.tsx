@@ -5,6 +5,7 @@ import Hero from './components/hero/Hero'
 import Navbar from './components/Navbar'
 import ProcessSection from './components/process/ProcessSection'
 import Regions from './components/regions/RegionsSection'
+import SuccessStoriesSection from './components/testimonials/SuccessStoriesSection'
 import UpdatesSection from './components/updates/UpdatesSection'
 
 
@@ -21,6 +22,7 @@ function App() {
       <GuidanceSection/>
       <CoursesSection/>
       <ProcessSection/>
+      <SuccessStoriesSection/>
     </div>    
     </>
   )

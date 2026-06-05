@@ -1,0 +1,54 @@
+import TestimonialCard from "./TestimonialCard";
+import { testimonials } from "./testimonialsData";
+import { HiOutlineChatAlt2 } from "react-icons/hi";
+
+const SuccessStoriesSection = () => {
+  return (
+    <section className="bg-[#F8FAFC] py-16 md:py-20">
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+
+        {/* TOP CONTENT */}
+        <div className="text-center">
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#F97316]/10 px-4 py-2 text-sm font-medium text-[#F97316]">
+            <HiOutlineChatAlt2 />
+            Success Stories
+          </div>
+
+          {/* Heading */}
+          <h2 className="mt-5 text-3xl font-bold text-[#0F3D5E] sm:text-4xl md:text-5xl">
+            Stories of Ambition {" "}
+            <span className="text-[#14B8A6]">
+              & Achievement
+            </span>
+          </h2>
+
+          {/* Description */}
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-500">
+            Real student journeys guided by Future Star Foundation
+            towards successful admissions and brighter careers.
+          </p>
+        </div>
+
+        {/* TESTIMONIALS */}
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+          {testimonials.map((item) => (
+            <TestimonialCard
+              key={item.name}
+              name={item.name}
+              course={item.course}
+              message={item.message}
+              image={item.image}
+            />
+          ))}
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SuccessStoriesSection;
