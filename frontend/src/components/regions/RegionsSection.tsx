@@ -3,7 +3,7 @@ import Pills from "./Pills";
 
 const RegionsSection = () => {
   return (
-    <section className="bg-white py-12 md:py-20">
+    <section className="bg-white py-12 md:py-10">
       
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
 
@@ -16,7 +16,7 @@ const RegionsSection = () => {
         <Pills />
 
         {/* Description */}
-        <p className="mx-auto mt-10 max-w-3xl max-w-md text-base leading-7 text-gray-600">
+        <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-gray-600">
           Our presence in key hubs ensures on-ground
           support and direct counselling for students
           from diverse educational backgrounds across

@@ -1,4 +1,5 @@
 import './App.css'
+import GuidanceSection from './components/guidance/GuidanceSection'
 import Hero from './components/hero/Hero'
 import Navbar from './components/Navbar'
 import Regions from './components/regions/RegionsSection'
@@ -15,6 +16,7 @@ function App() {
       <Hero/>
       <UpdatesSection/>
       <Regions/>
+      <GuidanceSection/>
     </div>    
     </>
   )
