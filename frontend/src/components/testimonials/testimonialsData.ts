@@ -1,6 +1,6 @@
-// import student1 from "../../assets/student1.webp";
-// import student2 from "../../assets/student2.webp";
-// import student3 from "../../assets/student3.webp";
+import student1 from "../../assets/bpt.webp";
+import student2 from "../../assets/bams.webp";
+import student3 from "../../assets/btech.webp";
 
 export const testimonials = [
   {
@@ -8,7 +8,7 @@ export const testimonials = [
     course: "MBBS",
     message:
       "Future Star Foundation made my MBBS dream a reality. Their NEET guidance and admission support was incredible from start to finish.",
-    // image: student1,
+    image: student1,
   },
 
   {
@@ -16,7 +16,7 @@ export const testimonials = [
     course: "BTech",
     message:
       "The personalized mentorship helped me choose the right engineering branch. I'm now studying BTech at my dream college in Maharashtra.",
-    // image: student2,
+    image: student2,
   },
 
   {
@@ -24,6 +24,6 @@ export const testimonials = [
     course: "MBA",
     message:
       "Verified admissions and transparent process — exactly what I needed. The team secured my MBA seat without any stress.",
-    // image: student3,
+    image: student3,
   },
 ];
