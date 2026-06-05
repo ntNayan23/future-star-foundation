@@ -2,6 +2,7 @@ import './App.css'
 import ContactSection from './components/ContactSection'
 import CoursesSection from './components/courses/CoursesSection'
 import CTASection from './components/CTASection'
+import Footer from './components/Footer'
 import GuidanceSection from './components/guidance/GuidanceSection'
 import Hero from './components/hero/Hero'
 import Navbar from './components/Navbar'
@@ -27,6 +28,7 @@ function App() {
       <SuccessStoriesSection/>
       <CTASection/>
       <ContactSection/>
+      <Footer/>
     </div>    
     </>
   )
