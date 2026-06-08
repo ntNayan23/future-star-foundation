@@ -7,10 +7,12 @@ import SuccessStoriesPage from "../pages/SuccessStoriesPage";
 import ContactPage from "../pages/ContactPage";
 
 import Layout from "../layouts/Layout";
+import ScrollToTop from "../ScrollToTop";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
     <Layout>
     <Routes>
       <Route path="/" element={<HomePage />} />
