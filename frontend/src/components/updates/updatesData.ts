@@ -14,28 +14,7 @@ export const updates = [
       "Admit cards released for Engineering entrance exams.",
     status: "May 18, 2024",
   },
-  {
-    category: "Active",
-    title: "MHT CET PCM",
-    description:
-      "Admit cards released for Engineering entrance exams.",
-    status: "May 18, 2024",
-  },
-  {
-    category: "Active",
-    title: "MHT CET PCM",
-    description:
-      "Admit cards released for Engineering entrance exams.",
-    status: "May 18, 2024",
-  },
-  {
-    category: "Active",
-    title: "MHT CET PCM",
-    description:
-      "Admit cards released for Engineering entrance exams.",
-    status: "May 18, 2024",
-  },
-
+  
   {
     category: "Active",
     title: "MBA CET Results",

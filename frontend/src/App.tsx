@@ -10,12 +10,12 @@ import './App.css'
 // import Regions from './components/regions/RegionsSection'
 // import SuccessStoriesSection from './components/testimonials/SuccessStoriesSection'
 // import UpdatesSection from './components/updates/UpdatesSection'
-
+import { supabase } from "./lib/supabase";
 import AppRoutes from './routes/AppRoutes'
 
 function App() {
  
-
+ console.log(supabase);
   return (
       // <>
       // <div className="bg-[#F8FAFC]">
@@ -33,6 +33,7 @@ function App() {
       // </div>    
       // </>
       <AppRoutes />
+     
   )
 }
 

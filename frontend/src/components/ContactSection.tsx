@@ -9,10 +9,59 @@ import {
   FaInstagram,
   FaTwitter,
   FaYoutube,
-//   FaWhatsapp,
+  //   FaWhatsapp,
 } from "react-icons/fa";
+import toast from "react-hot-toast";
+import { useState } from "react";
+import { supabase } from "../lib/supabase";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    full_name: "",
+    phone: "",
+    course: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const { error } = await supabase.from("contact_leads").insert([formData]);
+
+    setLoading(false);
+
+    if (error) {
+      toast.error("Something went wrong");
+      // alert("Something went wrong");
+      console.log(error);
+      return;
+    }
+    toast.success("Form Submitted Sucessfully")
+    // alert("Form submitted successfully!");
+
+    setFormData({
+      full_name: "",
+      phone: "",
+      course: "",
+      message: "",
+    });
+  };
+
   return (
     <section className="bg-[#F8FAFC] py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-12">
@@ -161,7 +210,7 @@ const ContactSection = () => {
               </p>
 
               {/* FORM */}
-              <form className="mt-10">
+              <form className="mt-10" onSubmit={handleSubmit}>
                 {/* ROW */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   {/* NAME */}
@@ -172,6 +221,9 @@ const ContactSection = () => {
 
                     <input
                       type="text"
+                      name="full_name"
+                      value={formData.full_name}
+                      onChange={handleChange}
                       placeholder="Enter your name"
                       className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
                     />
@@ -185,6 +237,9 @@ const ContactSection = () => {
 
                     <input
                       type="text"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       placeholder="Enter your number"
                       className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
                     />
@@ -197,7 +252,12 @@ const ContactSection = () => {
                     Interested Course
                   </label>
 
-                  <select className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10">
+                  <select
+                    name="course"
+                    value={formData.course}
+                    onChange={handleChange}
+                    className="h-14 w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
+                  >
                     <option>Select a course</option>
                     <option>MBBS</option>
                     <option>BAMS</option>
@@ -215,15 +275,18 @@ const ContactSection = () => {
                   </label>
 
                   <textarea
+                    name="message"
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="How can we help you?"
                     className="w-full rounded-2xl border border-gray-200 bg-[#F8FAFC] px-5 py-4 outline-none transition-all duration-300 focus:border-[#14B8A6] focus:ring-4 focus:ring-[#14B8A6]/10"
                   />
                 </div>
 
                 {/* BUTTON */}
-                <button className="mt-8 h-14 w-full rounded-2xl bg-[#F97316] text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#ea580c] hover:shadow-xl">
-                  Submit Request
+                <button type="submit" className="mt-8 h-14 w-full rounded-2xl bg-[#F97316] text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#ea580c] hover:shadow-xl">
+                   {loading ? "Submitting..." : "Submit Request"}
                 </button>
 
                 {/* TRUST TEXT */}

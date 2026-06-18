@@ -62,7 +62,7 @@ const Footer = () => {
             </p>
 
             {/* Socials */}
-            <div className="mt-8 flex items-center gap-4">
+            {/* <div className="mt-8 flex items-center gap-4">
               {[<FaFacebookF />, <FaInstagram />, <FaLinkedinIn />].map(
                 (icon, index) => (
                   <button
@@ -73,9 +73,39 @@ const Footer = () => {
                   </button>
                 ),
               )}
-            </div>
+            </div> */}
+
+
+             {/* Socials */}
+          <div className="mt-8 flex items-center gap-4">
+            {[
+              {
+                icon: <FaFacebookF />,
+                link: "https://facebook.com",
+              },
+              {
+                icon: <FaInstagram />,
+                link: "https://instagram.com",
+              },
+              {
+                icon: <FaLinkedinIn />,
+                link: "https://linkedin.com",
+              },
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#14B8A6] hover:bg-[#14B8A6]"
+              >
+                {item.icon}
+              </a>
+            ))}
+          </div>
           </div>
 
+         
           {/* QUICK LINKS */}
           <div>
             <h3 className="text-xl font-semibold">Quick Links</h3>
@@ -129,11 +159,21 @@ const Footer = () => {
             </p>
 
             {/* WhatsApp CTA */}
-            <button className="mt-8 flex items-center gap-3 rounded-2xl border border-[#14B8A6]/30 bg-[#14B8A6]/10 px-5 py-4 font-medium text-[#14B8A6] transition-all duration-300 hover:bg-[#14B8A6] hover:text-white">
+            {/* <a
+              href="https://wa.me/919111596111"
+              target="_blank"
+              rel="noopener noreferrer"
+            > */}
+            <button
+              className="mt-8 flex items-center gap-3 rounded-2xl border border-[#14B8A6]/30 bg-[#14B8A6]/10 px-5 py-4 font-medium text-[#14B8A6] transition-all duration-300 hover:bg-[#14B8A6] hover:text-white"
+              onClick={() =>
+                window.open("https://wa.me/919111596111", "_blank")
+              }
+            >
               <FaWhatsapp className="text-xl" />
               WhatsApp Us
             </button>
-
+            {/* </a> */}
             {/* Phone */}
             {/* <div className="mt-6 flex items-center gap-3 text-white">
 

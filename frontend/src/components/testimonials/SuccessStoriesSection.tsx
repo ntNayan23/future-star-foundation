@@ -4,7 +4,7 @@ import { HiOutlineChatAlt2 } from "react-icons/hi";
 
 const SuccessStoriesSection = () => {
   return (
-    <section className="bg-[#F8FAFC] py-10 md:py-12">
+    <section className="bg-[#F8FAFC] py-10 md:py-12 ">
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
 
@@ -12,7 +12,7 @@ const SuccessStoriesSection = () => {
         <div className="text-center">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#F97316]/10 px-4 py-2 text-sm font-medium text-[#F97316]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#F97316]/10  px-4 py-2 text-sm font-medium text-[#F97316]">
             <HiOutlineChatAlt2 />
             Success Stories
           </div>
