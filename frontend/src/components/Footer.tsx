@@ -10,10 +10,9 @@ import { HiOutlinePhone } from "react-icons/hi";
 import logo from "../assets/future-star-foundation-logo.png";
 import { useSiteSettings } from "../context/SiteSettingsContext";
 
-
 const Footer = () => {
   const { settings, loading } = useSiteSettings();
-   if (loading) return null;
+  if (loading) return null;
   const contacts = [
     {
       name: "Harshal Sir",
@@ -171,8 +170,8 @@ const Footer = () => {
               onClick={() =>
                 window.open(
                   settings?.whatsapp_number
-                    ? `https://wa.me/${settings.whatsapp_number.replace(/\s+/g, "")}`
-                    : "https://wa.me/",
+                    ? `https://api.whatsapp.com/send/?phone=${settings.whatsapp_number.replace(/\s+/g, "")}&text&type=phone_number&app_absent=0`
+                    : "https://api.whatsapp.com/",
                   "_blank",
                 )
               }
