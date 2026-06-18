@@ -167,14 +167,18 @@ const Footer = () => {
             > */}
             <button
               className="mt-8 flex items-center gap-3 rounded-2xl border border-[#14B8A6]/30 bg-[#14B8A6]/10 px-5 py-4 font-medium text-[#14B8A6] transition-all duration-300 hover:bg-[#14B8A6] hover:text-white"
-              onClick={() =>
-                window.open(
-                  settings?.whatsapp_number
-                    ? `https://api.whatsapp.com/send/?phone=${settings.whatsapp_number.replace(/\s+/g, "")}&text&type=phone_number&app_absent=0`
-                    : "https://api.whatsapp.com/",
-                  "_blank",
-                )
-              }
+              onClick={() => {
+                const phone = settings?.whatsapp_number?.replace(/\D/g, "");
+
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                  window.location.href = `whatsapp://send?phone=${phone}`;
+                } else {
+                  window.open(
+                    `https://web.whatsapp.com/send?phone=${phone}`,
+                    "_blank",
+                  );
+                }
+              }}
             >
               <FaWhatsapp className="text-xl" />
               WhatsApp Us
