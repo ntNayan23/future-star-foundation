@@ -14,8 +14,12 @@ import {
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { supabase } from "../lib/supabase";
+import { useSiteSettings } from "../context/SiteSettingsContext";
 
-const ContactSection = () => {
+
+const ContactSection = () => {  
+  const { settings, loading } = useSiteSettings();
+   if (loading) return null;
   const [formData, setFormData] = useState({
     full_name: "",
     phone: "",
@@ -23,7 +27,7 @@ const ContactSection = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
+  const [formLoading, setFormLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -39,11 +43,11 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setLoading(true);
+    setFormLoading(true);
 
     const { error } = await supabase.from("contact_leads").insert([formData]);
 
-    setLoading(false);
+    setFormLoading(false);
 
     if (error) {
       toast.error("Something went wrong");
@@ -110,17 +114,17 @@ const ContactSection = () => {
 
                     <div className="mt-2 space-y-1">
                       <a
-                        href="tel:+919111536111"
+                        href={`tel:${settings?.phone_1?.replace(/\s+/g, '') || '+919111536111'}`}
                         className="block text-base font-semibold text-white transition hover:text-[#14B8A6]"
                       >
-                        +91 9111536111
+                        {settings?.phone_1 || "+91 9111536111"}
                       </a>
 
                       <a
-                        href="tel:+919561193111"
+                        href={`tel:${settings?.phone_2?.replace(/\s+/g, '') || '+919561193111'}`}
                         className="block text-base font-semibold text-white transition hover:text-[#14B8A6]"
                       >
-                        +91 9561193111
+                        {settings?.phone_2 || "+91 9561193111"}
                       </a>
                     </div>
 
@@ -149,10 +153,10 @@ const ContactSection = () => {
                     </p>
 
                     <a
-                      href="mailto:futurestarfoundation2025@gmail.com"
+                      href={`mailto:${settings?.email || 'futurestarfoundation2025@gmail.com'}`}
                       className="mt-2 block text-base font-semibold leading-7 text-white transition hover:text-[#14B8A6]"
                     >
-                      futurestarfoundation2025@gmail.com
+                      {settings?.email || "futurestarfoundation2025@gmail.com"}
                     </a>
                   </div>
                 </div>
@@ -169,9 +173,8 @@ const ContactSection = () => {
                     </p>
 
                     <p className="mt-2 max-w-xs text-base font-semibold leading-8 text-white/90">
-                      Chatrapati Square, Near Sai Mandir, Sawarkar Nagar,
-                      Vivekanand Nagar, Nagpur, Maharashtra 440015
-                    </p>
+                      {settings?.address || "Chatrapati Square, Near Sai Mandir, Sawarkar Nagar, Vivekanand Nagar, Nagpur, Maharashtra 440015"}
+                      </p>
                   </div>
                 </div>
               </div>
@@ -285,8 +288,12 @@ const ContactSection = () => {
                 </div>
 
                 {/* BUTTON */}
-                <button type="submit" className="mt-8 h-14 w-full rounded-2xl bg-[#F97316] text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#ea580c] hover:shadow-xl">
-                   {loading ? "Submitting..." : "Submit Request"}
+                <button
+                  type="submit"
+                  disabled={formLoading}
+                  className="mt-8 h-14 w-full rounded-2xl bg-[#F97316] text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#ea580c] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {formLoading ? "Submitting..." : "Submit Request"}
                 </button>
 
                 {/* TRUST TEXT */}

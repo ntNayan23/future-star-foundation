@@ -8,16 +8,20 @@ import {
 import { HiOutlinePhone } from "react-icons/hi";
 
 import logo from "../assets/future-star-foundation-logo.png";
+import { useSiteSettings } from "../context/SiteSettingsContext";
+
 
 const Footer = () => {
+  const { settings, loading } = useSiteSettings();
+   if (loading) return null;
   const contacts = [
     {
       name: "Harshal Sir",
-      phone: "+91 9111536111",
+      phone: settings?.phone_1 || "null",
     },
     {
       name: "Nikhil Sir",
-      phone: "+91 9561193111",
+      phone: settings?.phone_2 || "null",
     },
   ];
 
@@ -57,8 +61,8 @@ const Footer = () => {
 
             {/* Description */}
             <p className="mt-6 max-w-sm text-base leading-7 text-white/70">
-              Dedicated to excellence in educational consultancy and student
-              mentorship across Nagpur & Maharashtra.
+              {settings?.footer_description ||
+                "Dedicated to excellence in educational consultancy and student mentorship across Nagpur & Maharashtra."}
             </p>
 
             {/* Socials */}
@@ -75,37 +79,35 @@ const Footer = () => {
               )}
             </div> */}
 
-
-             {/* Socials */}
-          <div className="mt-8 flex items-center gap-4">
-            {[
-              {
-                icon: <FaFacebookF />,
-                link: "https://facebook.com",
-              },
-              {
-                icon: <FaInstagram />,
-                link: "https://instagram.com",
-              },
-              {
-                icon: <FaLinkedinIn />,
-                link: "https://linkedin.com",
-              },
-            ].map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#14B8A6] hover:bg-[#14B8A6]"
-              >
-                {item.icon}
-              </a>
-            ))}
+            {/* Socials */}
+            <div className="mt-8 flex items-center gap-4">
+              {[
+                {
+                  icon: <FaFacebookF />,
+                  link: settings?.facebook_url || "Null",
+                },
+                {
+                  icon: <FaInstagram />,
+                  link: settings?.instagram_url || "Null",
+                },
+                {
+                  icon: <FaLinkedinIn />,
+                  link: settings?.linkedin_url || "Null",
+                },
+              ].map((item, index) => (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#14B8A6] hover:bg-[#14B8A6]"
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
           </div>
-          </div>
 
-         
           {/* QUICK LINKS */}
           <div>
             <h3 className="text-xl font-semibold">Quick Links</h3>
@@ -167,7 +169,12 @@ const Footer = () => {
             <button
               className="mt-8 flex items-center gap-3 rounded-2xl border border-[#14B8A6]/30 bg-[#14B8A6]/10 px-5 py-4 font-medium text-[#14B8A6] transition-all duration-300 hover:bg-[#14B8A6] hover:text-white"
               onClick={() =>
-                window.open("https://wa.me/919111596111", "_blank")
+                window.open(
+                  settings?.whatsapp_number
+                    ? `https://wa.me/${settings.whatsapp_number.replace(/\s+/g, "")}`
+                    : "https://wa.me/",
+                  "_blank",
+                )
               }
             >
               <FaWhatsapp className="text-xl" />
@@ -189,19 +196,21 @@ const Footer = () => {
               <HiOutlinePhone className="mt-1 text-xl text-[#14B8A6]" />
 
               <ul className="space-y-2">
-                {contacts.map((contact) => (
-                  <li key={contact.phone}>
-                    <span className="font-medium text-white">
-                      {contact.name}:
-                    </span>{" "}
-                    <a
-                      href={`tel:${contact.phone.replace(/\s+/g, "")}`}
-                      className="text-white/70 transition-colors duration-300 hover:text-[#14B8A6]"
-                    >
-                      {contact.phone}
-                    </a>
-                  </li>
-                ))}
+                {contacts
+                  .filter((contact) => contact.phone)
+                  .map((contact, index) => (
+                    <li key={index}>
+                      <span className="font-medium text-white">
+                        {contact.name}:
+                      </span>{" "}
+                      <a
+                        href={`tel:${contact.phone}`}
+                        className="text-white/70 hover:text-[#14B8A6]"
+                      >
+                        {contact.phone}
+                      </a>
+                    </li>
+                  ))}
               </ul>
             </div>
           </div>
