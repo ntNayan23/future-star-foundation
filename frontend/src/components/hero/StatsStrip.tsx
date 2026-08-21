@@ -40,10 +40,10 @@ const StatsStrip = () => {
 
             {/* Text */}
             <div>
-              <h3 className="text-xl font-bold text-white md:text-3xl leading-none">
+              <h3 className="text-[1.875rem] font-extrabold leading-none text-white md:text-[2.75rem]">
                 {stat.number}
               </h3>
-              <p className="text-[11px] text-white/70 md:text-xs mt-1">
+              <p className="mt-1 text-[0.8125rem] font-medium leading-[1.4] text-white/70 md:text-sm">
                 {stat.label}
               </p>
             </div>

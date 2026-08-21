@@ -50,12 +50,12 @@ const UpdateCard = ({
       </h3>
 
       {/* Description */}
-      <p className="mt-2 text-xs leading-5 text-gray-500 sm:mt-3 sm:text-sm sm:leading-6">
+      <p className="mt-2 text-base leading-[1.6] text-gray-500 sm:mt-3">
         {description}
       </p>
 
       {/* Button */}
-      <button className="mt-5 w-full rounded-lg border border-gray-200 py-2.5 text-xs font-semibold text-[#0F3D5E] transition hover:border-[#F97316] hover:text-[#F97316] sm:py-3 sm:text-sm">
+      <button className="mt-5 w-full rounded-lg border border-gray-200 py-2.5 text-[0.9375rem] font-semibold text-[#0F3D5E] transition hover:border-[#F97316] hover:text-[#F97316] sm:py-3">
         View Details
       </button>
     </div>

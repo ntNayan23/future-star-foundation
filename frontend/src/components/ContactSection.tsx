@@ -71,7 +71,7 @@ const ContactSection = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-12">
         {/* SECTION HEADING */}
         <div className="mb-14 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[3px] text-[#14B8A6]">
+          <p className="eyebrow text-[#14B8A6]">
             Contact Us
           </p>
 
@@ -91,7 +91,7 @@ const ContactSection = () => {
             {/* LEFT SIDE */}
             <div className="bg-[#0F3D5E] px-8 py-12 text-white md:px-10">
               {/* Heading */}
-              <h2 className="text-3xl font-bold leading-tight">Get In Touch</h2>
+              <h3 className="text-2xl font-bold leading-tight">Get In Touch</h3>
 
               {/* Description */}
               <p className="mt-5 text-base leading-8 text-white/70">

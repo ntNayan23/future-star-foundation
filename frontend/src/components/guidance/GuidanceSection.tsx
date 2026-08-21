@@ -40,7 +40,7 @@ const GuidanceSection = () => {
         <div>
 
           {/* Badge */}
-          <div className="mb-5 inline-flex items-center rounded-full bg-[#F97316]/10 px-4 py-2 text-sm font-medium text-[#F97316]">
+          <div className="eyebrow mb-5 inline-flex items-center rounded-full bg-[#F97316]/10 px-4 py-2 text-[#F97316]">
             Your Career, Our Mission
           </div>
 

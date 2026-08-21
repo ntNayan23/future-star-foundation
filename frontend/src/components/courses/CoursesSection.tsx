@@ -16,7 +16,7 @@ const CoursesSection = () => {
           <div>
 
             {/* Badge */}
-            <div className="mb-4 inline-flex rounded-full bg-[#14B8A6]/10 px-4 py-2 text-sm font-medium text-[#14B8A6]">
+            <div className="eyebrow mb-4 inline-flex rounded-full bg-[#14B8A6]/10 px-4 py-2 text-[#14B8A6]">
               Academic Programs
             </div>
 

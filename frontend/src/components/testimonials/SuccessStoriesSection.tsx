@@ -12,7 +12,7 @@ const SuccessStoriesSection = () => {
         <div className="text-center">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#F97316]/10  px-4 py-2 text-sm font-medium text-[#F97316]">
+          <div className="eyebrow inline-flex items-center gap-2 rounded-full bg-[#F97316]/10  px-4 py-2 text-[#F97316]">
             <HiOutlineChatAlt2 />
             Success Stories
           </div>

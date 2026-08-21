@@ -29,14 +29,14 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <div className="leading-tight">
-              <h1 className="text-lg font-bold tracking-wide">
+              <div className="font-heading text-lg font-bold tracking-wide">
                 <span className="text-[#D4AF37]">
                   Future Star
                 </span>{" "}
                 <span className="text-[#0F3D5E]">
                   Foundation
                 </span>
-              </h1>
+              </div>
 
               <p className="text-[10px] uppercase tracking-[2px] text-gray-500">
                 Admission Consultancy

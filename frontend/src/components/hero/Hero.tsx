@@ -16,22 +16,22 @@ const Hero = () => {
             Nagpur & Maharashtra's Trusted Admission Partner
           </div>
 
-          <h1 className="max-w-lg text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-lg text-[2.25rem] font-extrabold leading-[1.1] tracking-[-0.035em] sm:text-[3.5rem] lg:text-[4rem]">
             Helping Nagpur Students Build{" "}
             <span className="text-[#3EEAD8]">Successful Careers</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-sm leading-7 text-white/80 sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-[1.6] text-white/80 sm:text-lg">
             Personalized counselling for MBBS, MBA, BTech, BAMS, BPT, and career
             guidance for students across Nagpur & Maharashtra.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <button className="rounded-full bg-[#F97316] px-6 py-3 text-sm font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#ea580c] hover:shadow-orange-500/30 sm:px-8 sm:py-4">
+            <button className="rounded-full bg-[#F97316] px-6 py-3 text-base font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#ea580c] hover:shadow-orange-500/30 sm:px-8 sm:py-4">
               Book Free Counselling
             </button>
 
-            <button className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold backdrop-blur-md transition-all duration-300 hover:bg-white/20 sm:px-8 sm:py-4">
+            <button className="rounded-full border border-white/40 bg-white/10 px-6 py-3 text-base font-semibold backdrop-blur-md transition-all duration-300 hover:bg-white/20 sm:px-8 sm:py-4">
               Explore Courses
             </button>
           </div>

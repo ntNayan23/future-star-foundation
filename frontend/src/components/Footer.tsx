@@ -109,9 +109,9 @@ const Footer = () => {
 
           {/* QUICK LINKS */}
           <div>
-            <h3 className="text-xl font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-bold">Quick Links</h3>
 
-            <ul className="mt-6 space-y-4 text-white/70">
+            <ul className="mt-6 space-y-4 text-sm text-white/70">
               {[
                 "Home",
                 "Courses",
@@ -131,9 +131,9 @@ const Footer = () => {
 
           {/* COURSES */}
           <div>
-            <h3 className="text-xl font-semibold">Popular Courses</h3>
+            <h3 className="text-lg font-bold">Popular Courses</h3>
 
-            <ul className="mt-6 space-y-4 text-white/70">
+            <ul className="mt-6 space-y-4 text-sm text-white/70">
               {[
                 "MBBS Admissions",
                 "B.Tech Admissions",
@@ -153,9 +153,9 @@ const Footer = () => {
 
           {/* SUPPORT */}
           <div>
-            <h3 className="text-xl font-semibold">Support</h3>
+            <h3 className="text-lg font-bold">Support</h3>
 
-            <p className="mt-6 max-w-xs leading-7 text-white/70">
+            <p className="mt-6 max-w-xs text-sm leading-[1.6] text-white/70">
               Available 24/7 for student counselling and admission assistance.
             </p>
 

@@ -9,7 +9,7 @@ const ProcessSection = () => {
         {/* TOP CONTENT */}
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#14B8A6]/10 px-4 py-2 text-sm font-medium text-[#14B8A6]">
+          <div className="eyebrow inline-flex items-center gap-2 rounded-full bg-[#14B8A6]/10 px-4 py-2 text-[#14B8A6]">
             <HiOutlineCog />
             How It Works
           </div>

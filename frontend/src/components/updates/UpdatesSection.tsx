@@ -72,7 +72,7 @@ const UpdatesSection = () => {
           <div>
 
             {/* Badge */}
-            <div className="mb-5 inline-flex rounded-full bg-[#14B8A6]/10 px-4 py-2 text-sm font-semibold text-[#14B8A6]">
+            <div className="eyebrow mb-5 inline-flex rounded-full bg-[#14B8A6]/10 px-4 py-2 text-[#14B8A6]">
               Real-time Notifications
             </div>
 
