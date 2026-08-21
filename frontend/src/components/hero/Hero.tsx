@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-8 px-5 pb-8 lg:min-h-[calc(100vh-88px)] lg:grid-cols-2 lg:gap-16 lg:px-12">
         {/* LEFT CONTENT */}
         <div>
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs backdrop-blur-md sm:text-sm">
+          <div className="eyebrow mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-white backdrop-blur-md">
             <HiLocationMarker className="text-[#3EEAD8]" />
             Nagpur & Maharashtra's Trusted Admission Partner
           </div>

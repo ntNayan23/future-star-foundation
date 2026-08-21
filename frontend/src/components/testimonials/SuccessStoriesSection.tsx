@@ -18,11 +18,9 @@ const SuccessStoriesSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="mt-5 text-3xl font-bold text-[#0F3D5E] sm:text-4xl md:text-5xl">
+          <h2 className="section-title mt-5 text-[#0F3D5E]">
             Stories of Ambition {" "}
-            <span className="text-[#14B8A6]">
-              & Achievement
-            </span>
+            <span className="text-[#14B8A6]">& Achievement</span>
           </h2>
 
           {/* Description */}

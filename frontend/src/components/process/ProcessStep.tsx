@@ -17,9 +17,9 @@ const ProcessStep = ({ step, title, description, color }: ProcessStepProps) => {
       </div>
       {/* Content */}
       <div className="mt-6">
-        <h3 className="text-xl font-semibold text-[#0F3D5E]">{title}</h3>
+        <h3 className="card-title text-[#0F3D5E]">{title}</h3>
 
-        <p className="mt-2 max-w-[180px] text-base leading-6 text-gray-500">
+        <p className="body-copy mt-2 max-w-[180px] text-gray-500">
           {description}
         </p>
       </div>

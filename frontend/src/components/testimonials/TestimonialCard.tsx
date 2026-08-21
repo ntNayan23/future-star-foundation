@@ -43,11 +43,11 @@ const TestimonialCard = ({
         {/* Content */}
         <div>
 
-          <h4 className="text-lg font-semibold text-[#0F3D5E]">
+          <h4 className="card-title text-[#0F3D5E]">
             {name}
           </h4>
 
-          <p className="text-sm font-medium text-[#14B8A6]">
+          <p className="meta-text text-[#14B8A6]">
             Admitted to {course}
           </p>
 

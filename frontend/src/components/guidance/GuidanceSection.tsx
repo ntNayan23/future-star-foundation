@@ -45,7 +45,7 @@ const GuidanceSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-xl text-4xl font-bold leading-tight text-[#0F3D5E] sm:text-4xl md:text-3xl">
+          <h2 className="section-title max-w-xl text-[#0F3D5E]">
             Strategic Guidance <span className="text-[#14B8A6]">For Your Career</span>
           </h2>
 

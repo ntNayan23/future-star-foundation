@@ -21,11 +21,9 @@ const CoursesSection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="max-w-xl text-4xl font-bold leading-tight text-[#0F3D5E] md:text-5xl">
+            <h2 className="section-title max-w-xl text-[#0F3D5E]">
               Premier Courses
-              <span className="block text-[#14B8A6]">
-                We Support
-              </span>
+              <span className="text-[#14B8A6]"> We Support</span>
             </h2>
           </div>
 

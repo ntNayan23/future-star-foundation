@@ -9,7 +9,7 @@ const RegionsSection = () => {
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
 
         {/* Heading */}
-        <h2 className="text-[28px] font-semibold leading-tight text-[#0F3D5E] sm:text-3xl md:text-4xl">
+        <h2 className="section-title text-[#0F3D5E]">
           Serving Students Across Nagpur & Maharashtra
         </h2>
 

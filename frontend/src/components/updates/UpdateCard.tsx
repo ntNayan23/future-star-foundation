@@ -28,7 +28,7 @@ const UpdateCard = ({
 
         <span
           className={`
-            rounded-full px-3 py-1 text-[10px] font-semibold sm:text-xs
+            rounded-full px-3 py-1 text-xs font-semibold
             ${
               category === "Urgent"
                 ? "bg-[#F97316]/10 text-[#F97316]"
@@ -39,7 +39,7 @@ const UpdateCard = ({
           {category}
         </span>
 
-        <span className="text-[10px] text-gray-400 sm:text-xs">
+        <span className="meta-text text-gray-400">
           {status}
         </span>
       </div>

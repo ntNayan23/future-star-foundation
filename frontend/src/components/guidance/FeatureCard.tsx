@@ -24,9 +24,9 @@ const FeatureCard = ({
 
       {/* Content */}
       <div>
-        <h3 className="text-lg font-semibold text-[#0F3D5E]">{title}</h3>
+        <h3 className="card-title text-[#0F3D5E]">{title}</h3>
 
-        <p className="mt-1 text-sm leading-6 text-gray-500">{description}</p>
+        <p className="body-copy mt-1 text-gray-500">{description}</p>
       </div>
     </div>
   );

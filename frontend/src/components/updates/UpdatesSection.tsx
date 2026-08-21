@@ -77,12 +77,9 @@ const UpdatesSection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="max-w-3xl text-3xl font-bold leading-tight text-[#0F3D5E] sm:text-4xl md:text-5xl">
+            <h2 className="section-title max-w-3xl text-[#0F3D5E]">
               Latest Admission Updates
-
-              <span className="block text-[#14B8A6]">
-                & Exam Alerts
-              </span>
+              <span className="text-[#14B8A6]"> & Exam Alerts</span>
             </h2>
 
             {/* Description */}

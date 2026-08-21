@@ -17,7 +17,7 @@ const CTASection = () => {
           <div className="relative z-10">
 
             {/* Heading */}
-            <h2 className="text-3xl font-bold text-white sm:text-4xl md:text-5xl">
+            <h2 className="section-title text-white">
               Start Your Journey With Confidence
             </h2>
 

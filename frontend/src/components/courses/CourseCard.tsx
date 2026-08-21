@@ -27,7 +27,7 @@ const CourseCard = ({
         />
 
         {/* Badge */}
-        <div className="absolute right-4 top-4 rounded-full bg-[#14B8A6] px-4 py-2 text-xs font-semibold text-white shadow-lg">
+        <div className="meta-text absolute right-4 top-4 rounded-full bg-[#14B8A6] px-4 py-2 font-bold text-white shadow-lg">
           {badge}
         </div>
 
@@ -43,7 +43,7 @@ const CourseCard = ({
             <Icon />
           </div>
 
-          <h3 className="text-2xl font-bold text-[#0F3D5E]">{title}</h3>
+          <h3 className="card-title text-[#0F3D5E]">{title}</h3>
         </div>
 
         {/* Description */}

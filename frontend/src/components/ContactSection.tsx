@@ -75,7 +75,7 @@ const ContactSection = () => {
             Contact Us
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold text-[#0F3D5E] sm:text-4xl md:text-5xl">
+          <h2 className="section-title mt-4 text-[#0F3D5E]">
             Let's Discuss Your Career Journey
           </h2>
 
@@ -108,7 +108,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold tracking-[2px] text-[#14B8A6]">
+                    <p className="eyebrow text-[#14B8A6]">
                       PHONE
                     </p>
 
@@ -148,7 +148,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold tracking-[2px] text-[#14B8A6]">
+                    <p className="eyebrow text-[#14B8A6]">
                       EMAIL
                     </p>
 
@@ -168,7 +168,7 @@ const ContactSection = () => {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold tracking-[2px] text-[#14B8A6]">
+                    <p className="eyebrow text-[#14B8A6]">
                       ADDRESS
                     </p>
 
@@ -218,7 +218,7 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   {/* NAME */}
                   <div>
-                    <label className="mb-3 block text-sm font-medium text-gray-600">
+                    <label className="form-label mb-3 block text-gray-600">
                       Full Name
                     </label>
 
@@ -234,7 +234,7 @@ const ContactSection = () => {
 
                   {/* PHONE */}
                   <div>
-                    <label className="mb-3 block text-sm font-medium text-gray-600">
+                    <label className="form-label mb-3 block text-gray-600">
                       Phone Number
                     </label>
 
@@ -251,7 +251,7 @@ const ContactSection = () => {
 
                 {/* COURSE */}
                 <div className="mt-6">
-                  <label className="mb-3 block text-sm font-medium text-gray-600">
+                  <label className="form-label mb-3 block text-gray-600">
                     Interested Course
                   </label>
 
@@ -273,7 +273,7 @@ const ContactSection = () => {
 
                 {/* MESSAGE */}
                 <div className="mt-6">
-                  <label className="mb-3 block text-sm font-medium text-gray-600">
+                  <label className="form-label mb-3 block text-gray-600">
                     Your Message
                   </label>
 
