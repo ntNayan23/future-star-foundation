@@ -4,10 +4,11 @@ import {
   Mail,
   Lock,
   Eye,
+  EyeOff,
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
-import { login } from "../../services/auth.service";
+import { getAdminSession, login, logout } from "../../services/auth.service";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -15,20 +16,31 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async () => {
     try {
       setLoading(true);
       setError("");
 
-      const { error } = await login(email, password);
+      const { error: loginError } = await login(email, password);
 
-      if (error) {
-        setError(error.message);
+      if (loginError) {
+        setError("Unable to sign in. Please check your email and password.");
+        return;
+      }
+
+      const { isAdmin } = await getAdminSession();
+
+      if (!isAdmin) {
+        await logout();
+        setError("You do not have admin access");
         return;
       }
 
       navigate("/admin/dashboard");
+    } catch {
+      setError("Unable to sign in. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -97,7 +109,7 @@ const LoginForm = () => {
           />
 
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter your password"
@@ -106,9 +118,11 @@ const LoginForm = () => {
 
           <button
             type="button"
+            onClick={() => setShowPassword((visible) => !visible)}
+            aria-label={showPassword ? "Hide password" : "Show password"}
             className="text-slate-400 transition hover:text-[#14B8A6]"
           >
-            <Eye size={18} />
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
           </button>
         </div>
 
